@@ -1,0 +1,13 @@
+/* Estilo base del botón */
+.boton-creadores {
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    font-size: 200%;
+    border-radius: 5%;
+    border: solid;
+    padding: 3px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s ease; /* Transición suave para el color */
+}

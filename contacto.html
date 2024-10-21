@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Portafolio Digital</title>
+    <link rel="stylesheet" href="Estilos/styles Jair.css"> <!-- Vincula el archivo CSS para estilos -->
+</head>
+<body>
+    <div class="bg-overlay"> <!-- Contenedor principal con fondo -->
+        <header>
+            <nav>
+                <h1 class="logo">Luis Rosa</h1> <!-- Logo o nombre del sitio -->
+                <button class="menu-button">☰</button> <!-- Botón para el menú -->
+                <div class="nav-links"> <!-- Navegación del sitio -->
+                    <a href="index.html">Inicio</a>
+                    <a href="acerca.html">Acerca de mí</a>
+                    <a href="proyectos.html">Proyectos</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- Sección de Contacto -->
+            <section id="contact"> <!-- Sección dedicada a la información de contacto -->
+                <div class="section-content"> <!-- Contenedor para el contenido de la sección -->
+                    <h2>Contacto</h2> <!-- Título de la sección -->
+                    <div class="contact-info"> <!-- Contenedor para la información de contacto -->
+                        <h3>Información de contacto</h3> <!-- Subtítulo para la sección de contacto -->
+                        <ul> <!-- Lista de detalles de contacto -->
+                            <li>
+                                <i data-feather="Nombre"></i> 
+                                <a href="#">Luis Jair Rosa Méndez</a> 
+                            </li>
+                            <li>
+                                <i data-feather="mail"></i> 
+                                <span>rosamendezluisjair@gmail.com</span> 
+                            </li>
+                            <li>
+                                <i data-feather="phone"></i> 
+                                <span>+502 3040-2049</span> 
+                            </li>
+                            <li>
+                                <i data-feather="map-pin"></i>
+                                <span>San Juan Chamelco, Guatemala</span> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div> <!-- Contenedor para el formulario de contacto -->
+                        <h3>Envíame un mensaje</h3> <!-- Subtítulo que indica que hay un formulario para enviar mensajes -->
+                        <form action="https://formspree.io/f/movagyar" method="POST"> <!-- Formulario que envía datos a Formspree -->
+                            <label for="name">Nombre</label> <!-- Etiqueta para el campo de nombre -->
+                            <input type="text" id="name" name="name" required> <!-- Campo para que el usuario ingrese su nombre -->
+                            
+                            <label for="email">Email</label> <!-- Etiqueta para el campo de email -->
+                            <input type="email" id="email" name="email" required> <!-- Campo para que el usuario ingrese su correo electrónico -->
+                            
+                            <label for="message">Mensaje</label> <!-- Etiqueta para el campo de mensaje -->
+                            <textarea id="message" name="message" rows="4" required></textarea> <!-- Campo para que el usuario escriba su mensaje -->
+                            
+                            <button type="submit">Enviar</button> <!-- Botón para enviar el formulario -->
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer> <!-- Pie de página -->
+            <p>&copy; 2024 Luis Jair Rosa Méndez. Todos los derechos reservados.</p> <!-- Texto de derechos reservados -->
+        </footer>
+    </div>
+    <script>
+        feather.replace(); // Reemplaza los iconos con Feather Icons
+    </script>
+</body>
+</html>

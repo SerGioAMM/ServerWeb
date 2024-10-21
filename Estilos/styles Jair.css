@@ -1,0 +1,321 @@
+body, html {
+    /*Quita márgenes y rellenos predeterminados. Establece la fuente principal en Arial. Asegura que la página tenga al menos la altura de la ventana.*/
+    margin: 0; 
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    min-height: 100vh;
+}
+/* Aplica un degradado de colores animado que cambia de posición suavemente. */
+body {
+    background-image: linear-gradient(135deg, 
+        hsl(357, 91%, 50%) 0%,
+        hsl(225, 93%, 57%) 50%, 
+        hsl(141, 83%, 53%) 80%); 
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+}
+/* Mueve el fondo de izquierda a derecha para crear el efecto de animación de fondo. */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* Añade una imagen de fondo con un efecto de oscurecimiento semitransparente. */
+.bg-overlay {/* Azul claro */
+    background-image: url('/placeholder.svg?height=1080&width=1920');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+}
+/*Crea un encabezado semitransparente que se queda fijo en la parte superior al hacer scroll.*/
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+/*Distribuye los elementos de la barra de navegación de manera equilibrada, centrados verticalmente.*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/*Define el logo en un tamaño grande, en negrita y con un color verde claro.*/
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4ade80;
+}
+/*Estilos para los enlaces de navegación, sin subrayado, con efecto de cambio de color al pasar el cursor.*/
+.nav-links {
+    display: flex;
+}
+/* Estiliza los enlaces de navegación con color blanco, sin subrayado, y agrega espacio entre ellos.*/
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+    transition: color 0.3s;
+}
+/*Cambia el color de los enlaces a verde al pasar el cursor.*/
+.nav-links a:hover {
+    color: #4ade80;
+}
+/*Crea un botón de menú con fondo transparente, sin borde y un cursor clicable.*/
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+/*Centra y ajusta el contenido principal, con relleno alrededor.*/
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+/*Cada sección ocupa el 100% de la altura de la ventana y centra su contenido en el medio.*/
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Añade un cuadro con fondo oscuro, opacidad del 75%, relleno y bordes redondeados.*/
+.section-content {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+/*Define el tamaño de fuente, el color, alinea el texto al centro, y añade un margen inferior para espaciar.*/
+h2 {
+    font-size: 2rem;
+    color: #4ade80;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+/*Establece el tamaño de la imagen de perfil, la convierte en un círculo y la centra en la página.*/
+.profile-img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    display: block;
+}
+/*Da estilo a un botón con un fondo de color, texto en blanco y lo hace destacar con relleno y bordes redondeados.*/
+.cta-button {
+    background-color: #4ade80;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+/*Cambia el color de fondo del botón cuando pasa el cursor sobre él.*/
+.cta-button:hover {
+    background-color: #22c55e;
+}
+/*Muestra la lista de habilidades en varias columnas y elimina los puntos de lista.*/
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    list-style-type: none;
+    padding: 0;
+}
+/*Añade un fondo oscuro, relleno y bordes redondeados a cada habilidad.*/
+.skills-list li {
+    background-color: #1f2937;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+/*Organiza los proyectos en una disposición de una sola columna.*/
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Cambiado a una columna */
+    gap: 2rem;
+}
+/*Estiliza las tarjetas de proyecto con un fondo, relleno y bordes redondeados, y añade un efecto de transformación al pasar el cursor.*/
+.project-card {
+    background-color: #1f2937;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s;
+}
+/*Aumenta el tamaño de la tarjeta cuando pasas el cursor sobre ella.*/
+.project-card:hover {
+    transform: scale(1.05);
+}
+/*Ajusta la imagen del proyecto para que ocupe todo el ancho de la tarjeta.*/
+.project-img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+/*Coloca los enlaces de proyecto separados uniformemente.*/
+.project-links {
+    display: flex;
+    justify-content: space-between;
+}
+/*Estiliza los enlaces de los proyectos con un color y sin subrayado.*/
+.project-links a {
+    color: #4ade80;
+    text-decoration: none;
+}
+/*Añade un subrayado cuando pasas el cursor sobre los enlaces.*/
+.project-links a:hover {
+    text-decoration: underline;
+}
+/*Añade espacio debajo de la sección de información de contacto.*/
+.contact-info {
+    margin-bottom: 2rem;
+}
+/*Elimina los estilos predeterminados de la lista.*/
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+/*Alinea los elementos de contacto en fila y añade espacio entre ellos.*/
+.contact-info li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+/*Añade un margen entre el icono y el texto en la información de contacto.*/
+.contact-info svg {
+    margin-right: 0.5rem;
+}
+/*Organiza los campos del formulario en una columna vertical.*/
+form {
+    display: flex;
+    flex-direction: column;
+}
+/*Da estilo a los campos del formulario con relleno, bordes redondeados y fondo oscuro.*/
+input, textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #4a5568;
+    border: none;
+    color: white;
+}
+/*Da estilo al botón de enviar con un fondo de color, texto en blanco y lo hace clicable.*/
+button[type="submit"] {
+    background-color: #4ade80;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+/*Cambia el color de fondo del botón de enviar al pasar el cursor.*/
+button[type="submit"]:hover {
+    background-color: #22c55e;
+}
+/*Organiza las publicaciones del blog en varias columnas.*/
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+/*Añade un fondo oscuro translúcido al pie de página y lo alinea al centro.*/
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    text-align: center;
+}
+/*Ajusta la imagen dentro de las tarjetas de proyecto para que mantenga su proporción.*/
+.project-card img{
+    height: auto;
+}
+/*Define estilos para pantallas grandes, mostrando la barra de navegación como flex y organizando las cuadrículas en varias columnas.*/
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+    }
+    .menu-button {
+        display: none;
+    }
+    .projects-grid, .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Ajustes generales de tipografía y espaciado para pantallas pequeñas */
+    body, html {
+        font-size: 14px;
+    }
+    /* Ajuste para el menú de navegación en pantallas pequeñas */
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .nav-links a {
+        margin: 10px 0;
+        font-size: 1.1rem;
+    }
+    /* Asegurar que las imágenes sean responsivas */
+    .profile-img, .project-img {
+        max-width: 100%;
+        height: auto;
+    }
+    /* Hacer que los proyectos se muestren en una sola columna en pantallas pequeñas */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    /* Ajuste para el texto y espaciado dentro de los proyectos */
+    .project-card {
+        padding: 1rem;
+    }
+    /* Ajustes de los botones para adaptarlos mejor */
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    /* Hacer que los elementos de la lista de habilidades ocupen todo el ancho */
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+    /* Ajustes generales de padding para las secciones */
+    section {
+        padding: 2rem 1rem;
+    }
+    /* Ajuste de la sección de contacto */
+    .contact-info {
+        padding: 1rem;
+    }
+    /* Ajuste de formularios en pantallas pequeñas */
+    form {
+        padding: 1rem;
+    }
+    /* Ajustar el tamaño de los inputs y el textarea en dispositivos móviles */
+    input, textarea {
+        width: 100%;
+        font-size: 1rem;
+    }
+    /* Ajuste de los botones de envío */
+    button[type="submit"] {
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+    }
+}
+}

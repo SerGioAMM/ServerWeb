@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Pixel | Sergio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Estilos/estilo_principal.css">
+</head>
+<body>
+    
+    <div id="app" class="min-h-screen font-mono relative overflow-hidden">
+        <div id="pixelGrid" class="pixel-grid"></div>
+
+        <div class="relative z-10">
+            <header class="text-center py-8">
+                <h1 class="text-4xl font-bold pixel-art-text">¡Hola!, Soy Sergio Murcia</h1>
+                <h2 class="text-2xl pixel-art-text">Un Técnico en Sistemas</h2>
+            </header>
+
+            <main class="max-w-4xl mx-auto px-4">
+                <section id="aboutMe" class="p-4 mb-8 rounded-lg shadow-lg">
+                    <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
+                        <div class="w-24 h-24 rounded-lg">
+                            <img id="fotomia" src="IMG/fotomia2.jpg" alt="Avatar pixelado" class="w-full h-full object-cover rounded-lg">
+                        </div>
+                        <div>
+
+                            <h1 class="text-2xl pixel-art-text">Sobre mi</h1>
+
+                            <p class="font-bold" style="font-size: 140%;">Soy un aspirante a desarrollador fullstack y me gustan mucho las funciones interactivas y creativas.</br></br></br></p>
+
+                            <h2 class="text-2xl font-bold mb-2">Conocimientos </br> C#, C++, GDScript, SQL,  HTML, CSS, Soporte Técnico</br></br></h2>
+
+                        </div>
+                    </div>
+                </section>
+                <section id="skills" class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 pixel-art-text">Mis Habilidades</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="skill-card p-4 rounded-lg shadow-lg">
+                            <h3 class="font-bold mb-2">Desarrollo Web</h3>
+                            <div class="skill-bar" style="width: 40%;">40%</div>
+                        </div>
+                        <div class="skill-card p-4 rounded-lg shadow-lg">
+                            <h3 class="font-bold mb-2">Programación de Aplicaciones</h3>
+                            <div class="skill-bar" style="width: 45%;">45%</div>
+                        </div>
+                        <div class="skill-card p-4 rounded-lg shadow-lg">
+                            <h3 class="font-bold mb-2">Diseño de GUI</h3>
+                            <div class="skill-bar" style="width: 35%;">35%</div>
+                        </div>
+                    </div>
+                </section>
+                <section class="mb-8 projects">
+                    <h2 class="text-2xl font-bold mb-4 pixel-art-text">Mis Proyectos</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 project-grid">
+                        <a href="pagina_P1_NebulaDynamics.html" class="project-card">
+                            <div class="p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 project">
+                                
+                                <h3 class="font-bold pixel-art-text"></br>Nebula Dynamics</br></br></h3>
+                            </div>
+                        </a>
+                        <a href="pagina_P2_PropuestaRed.html" class="project-card">
+                            <div class="p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 project">
+                                <h3 class="font-bold pixel-art-text"></br>Propuesta de Red</br></br></h3>
+                            </div>
+                        </a>
+                        <a href="pagina_P3_Semaforos.html" class="project-card">
+                            <div class="p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 project">
+                                <h3 class="font-bold pixel-art-text"></br>Semáforos</br></br></h3>
+                            </div>
+                        </a>
+                        <a href="pagina_P4_Factorizar.html" class="project-card">
+                            <div class="p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 project">
+                                <h3 class="font-bold pixel-art-text"></br>Herramienta de Factorización</br></br></h3>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <section id="contact" class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 pixel-art-text">Contacto: sergiomurcia01@gmial.com</h2>
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-2">Nombre:</label>
+                            <input type="text" id="name" name="name" required class="w-full p-2 rounded-lg">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2">&nbsp;Email:</label>
+                            <input type="email" id="email" name="email" required class="w-full p-2 rounded-lg">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2">Mensaje:</label>
+                            <textarea id="message" name="message" required class="w-full p-2 rounded-lg h-32"></textarea>
+                        </div>
+                        <button type="submit" class="px-4 py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition-colors">Enviar</button>
+                    </form>
+                </section>
+                
+            </main>
+            
+            <footer class="text-center py-8">
+                <section class="creadores">
+                    <a href="Creadores.html" class="project-card">
+                        <div class="p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 project">
+                            <h3 class="font-bold pixel-art-text creadores-text"></br>Creadores</br></br></h3>
+                        </div>
+                    </a>
+                </section>
+                <div class="flex justify-center space-x-4">
+                    <a href="https://github.com/SerGioAMM" class="social-icon" id="github">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="Javacript/codigo_principal.js"></script>
+    <script src="Javacript/mensaje_contacto.js"></script>
+</body>
+</html>

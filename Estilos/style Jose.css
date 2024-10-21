@@ -1,0 +1,332 @@
+/*Importa las fuentes personalizadas*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+/* Estilos generales */
+* {
+    /*Establece los margenes y bordes*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Aplica una fuente para el cuerpo principal*/
+body, html {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background: #000000;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+/*Define el ancho y centra el contenedor*/
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Estilos del encabezado aplicando un fondo semi-transparente y la posición fija del encabezado*/
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+/*Estilo personalizado y color para el logo*/
+header .logo {
+    float: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #00ffff;
+}
+/*Cambia el color de los enlaces al pasar el cursor sobre las secciones*/
+header nav {
+    float: right;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #00ffff;
+}
+
+/* Estilos de las secciones */
+/*Centra el contenido y organiza las secciones*/
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #00ffff;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #ff00ff;
+}
+
+/* Estilos de la sección de inicio */
+#home {
+    /*Se aplica imagen de fondo a cada sección*/
+    background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+#home .content {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+#home p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #00ffff;
+    margin: 0 auto 2rem;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos de la sección Acerca de mí */
+#about {
+    /*Se aplica imagen de fondo a cada sección*/
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+#about .content {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+#about .skills {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+#about .skill {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin: 10px;
+}
+
+/* Estilos de la sección Proyectos */
+#projects {
+    /*Se aplica imagen de fondo a cada sección*/
+    background-image: url('IMG/Fondo3.png');
+}
+
+.project-grid {
+    /*Crea una cuadricula de 3 de 3 columnas para organizar los proyectos*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+/*Cada tarjeta de proyecto tiene un fondo semi-transparente, relleno y bordes redondeados.*/
+.project {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.project h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.project p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-images img {
+    width: 270px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Estilos de la sección Contacto */
+#contact {
+    /*Se aplica imagen de fondo a cada sección*/
+    background-image: url('IMG/Fondo4.png');
+}
+/*Organiza el formulario de contacto de manera vertical con espacios entre los campos de entrada.*/
+#contact form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5%;
+}
+
+#contact input, #contact textarea {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    width: 55%;
+}
+/* Cambia el color del botón de envío a magenta al pasar el cursor.*/
+#contact button {
+    padding: 1rem;
+    background-color: #00ffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #ff00ff;
+}
+
+/* Media Queries para hacer el diseño responsivo */
+/*Ajusta el diseño para pantallas*/
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    header .logo {
+        font-size: 1.2rem;
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #home .content {
+        padding: 1.5rem;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    #about .skill {
+        width: 80px;
+        height: 80px;
+        font-size: 0.9rem;
+    }
+}
+/*Estas reglas permiten adaptar el diseño a pantallas más pequeñas*/
+@media (max-width: 768px) {
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+
+    #about .skills {
+        justify-content: center;
+    }
+
+    #contact input, #contact textarea {
+        padding: 0.8rem;
+    }
+}
+/*Estas reglas permiten adaptar el diseño a pantallas más pequeñas*/
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    #home p {
+        font-size: 0.9rem;
+    }
+
+    #about .skill {
+        width: 70px;
+        height: 70px;
+        font-size: 0.8rem;
+    }
+}
